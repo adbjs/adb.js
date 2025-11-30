@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "remoteCache": {
+    "enabled": true
+  },
+  "globalDependencies": ["tsconfig.json"],
+  "tasks": {
+    "build": {
+			"dependsOn": ["^build"],
+			"inputs": ["bin/**", "src/**", "scripts/**", "package.json", "tsconfig.json"],
+			"outputs": ["dist/**"],
+			"outputLogs": "errors-only"
+		}
+  }
+}

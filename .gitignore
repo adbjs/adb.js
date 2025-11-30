@@ -70,6 +70,21 @@ web_modules/
 .env.*
 !.env.example
 
+# Miscellaneous
+.tmp
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.zed
+!.zed/settings.json
+.idea
+.DS_Store
+.turbo
+out
+package.tgz
+tsup.config.bundled*
+vitest.config.ts.timestamp*
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache

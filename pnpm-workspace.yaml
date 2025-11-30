@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+
+autoInstallPeers: false
+
+peerDependencyRules:
+  allowAny:
+    - '*'
+  ignoreMissing:
+    - '*'

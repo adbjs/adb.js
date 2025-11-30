@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@adbjs/adb.js",
+  "version": "0.0.0",
+  "description": "A powerful JavaScript & TypeScript framework for faster, easier bot creation.",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build --concurrency=4"
+  },
+  "type": "module",
+  "contributors": [
+    "Fabricio Pasapera Viera (@Hadez)"
+  ],
+  "keywords": [
+    "discord",
+    "bot",
+    "framework",
+    "node",
+    "adbjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adbjs/adb.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adbjs/adb.js/issues"
+  },
+  "funding": "https://github.com/adbjs/adb.js?sponsor",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-angular": "^20.0.0",
+    "prettier": "3.7.3",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "turbo": "^2.6.1",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@10.20.0"
+}
