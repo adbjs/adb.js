@@ -1,3 +1,11 @@
+- name: api changes
+  color: '5663e9'
+- name: api support
+  color: '5663e9'
+- name: apps:docs
+  color: fbca04
+- name: apps:website
+  color: fbca04
 - name: blocked
   color: ee1519
 - name: bug
@@ -16,6 +24,10 @@
   color: B0D6F1
 - name: invalid
   color: e4e669
+- name: package:adb.js
+  color: fbca04
+- name: package:create-adb
+  color: fbca04
 - name: question
   color: d876e3
 - name: semver:major
