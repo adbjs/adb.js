@@ -1,1 +1,6 @@
-
+- name: semver:major
+  color: c10f47
+- name: semver:minor
+  color: e4f486
+- name: semver:patch
+  color: e8be8b
