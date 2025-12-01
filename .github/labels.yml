@@ -1,7 +1,3 @@
-- name: api changes
-  color: '5663e9'
-- name: api support
-  color: '5663e9'
 - name: apps:docs
   color: fbca04
 - name: apps:website
