@@ -4,6 +4,10 @@ packages:
 
 autoInstallPeers: false
 
+onlyBuiltDependencies:
+  - core-js-pure
+  - unrs-resolver
+
 peerDependencyRules:
   allowAny:
     - '*'

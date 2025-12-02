@@ -1,15 +1,21 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "remoteCache": {
-    "enabled": true
-  },
-  "globalDependencies": ["tsconfig.json"],
-  "tasks": {
-    "build": {
+	"$schema": "https://turbo.build/schema.json",
+	"remoteCache": {
+		"enabled": true
+	},
+	"globalDependencies": ["tsconfig.json"],
+	"tasks": {
+		"build": {
 			"dependsOn": ["^build"],
-			"inputs": ["bin/**", "src/**", "scripts/**", "package.json", "tsconfig.json"],
+			"inputs": ["bin/**", "src/**", "scripts/**", "package.json", "tsconfig.json", "tsup.config.ts"],
 			"outputs": ["dist/**"],
 			"outputLogs": "errors-only"
+		},
+		"dev": {
+			"dependsOn": ["^build"],
+			"cache": false,
+			"persistent": true,
+			"outputLogs": "full"
 		}
-  }
+	}
 }

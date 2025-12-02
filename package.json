@@ -5,7 +5,8 @@
   "description": "A powerful JavaScript & TypeScript framework for faster, easier bot creation.",
   "private": true,
   "scripts": {
-    "build": "turbo run build --concurrency=4"
+    "build": "turbo run build --concurrency=4",
+    "create-package": "turbo gen create-package --args"
   },
   "type": "module",
   "contributors": [
@@ -29,8 +30,11 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-angular": "^20.0.0",
+    "eslint": "^9.39.1",
+    "eslint-config-neon": "^0.2.9",
     "prettier": "3.7.3",
     "prettier-plugin-organize-imports": "^4.3.0",
+    "tsup": "^8.5.1",
     "turbo": "^2.6.1",
     "typescript": "^5.9.3"
   },
