@@ -1,17 +1,17 @@
-import type { Options } from "tsup";
-import { defineConfig } from "tsup";
+import type { Options } from 'tsup';
+import { defineConfig } from 'tsup';
 
 export function createTsupConfig({
-	entry = ["src/index.ts"],
+	entry = ['src/index.ts'],
 	external = [],
 	noExternal = [],
-	platform = "node",
-	format = ["esm", "cjs"],
-	target = "es2022",
+	platform = 'node',
+	format = ['esm', 'cjs'],
+	target = 'es2022',
 	skipNodeModulesBundle = true,
 	clean = true,
-	shims = format.includes("cjs"),
-	cjsInterop = format.includes("cjs"),
+	shims = format.includes('cjs'),
+	cjsInterop = format.includes('cjs'),
 	minify = false,
 	terserOptions = {
 		mangle: false,
@@ -24,7 +24,7 @@ export function createTsupConfig({
 	sourcemap = true,
 	esbuildPlugins = [],
 	treeshake = false,
-	outDir = "dist",
+	outDir = 'dist',
 }: Options = {}) {
 	return defineConfig({
 		entry,

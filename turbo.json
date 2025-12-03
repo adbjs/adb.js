@@ -16,6 +16,63 @@
 			"cache": false,
 			"persistent": true,
 			"outputLogs": "full"
+		},
+		"changelog": {
+			"inputs": ["cliff.toml"],
+			"outputs": ["CHANGELOG.md"],
+			"outputLogs": "full"
+		},
+		"release": {
+			"dependsOn": ["^build"],
+			"inputs": ["CHANGELOG.md", "package.json"],
+			"outputs": [],
+			"outputLogs": "full"
+		},
+		"format": {
+			"dependsOn": ["^build"],
+			"inputs": [
+				"../../eslint.config.js",
+				"../../.prettierrc.json",
+				"../../tsconfig.eslint.json",
+				".prettierrc.js",
+				"bin/**",
+				"src/**",
+				"scripts/**",
+				"package.json",
+				"tsconfig.eslint.json"
+			],
+			"outputs": [],
+			"outputLogs": "errors-only"
+		},
+		"test": {
+			"dependsOn": ["^build"],
+			"inputs": [
+				"../../vitest.config.ts",
+				"__mocks__/**",
+				"__tests__/**",
+				"src/**",
+				"package.json",
+				"tsconfig.json",
+				"vitest.config.ts"
+			],
+			"outputs": ["coverage/**"],
+			"outputLogs": "new-only"
+		},
+		"lint": {
+			"dependsOn": ["^build"],
+			"inputs": [
+				"../../eslint.config.js",
+				"../../.prettierrc.json",
+				"../../tsconfig.eslint.json",
+				".prettierrc.js",
+				"bin/**",
+				"src/**",
+				"scripts/**",
+				"package.json",
+				"tsconfig.eslint.json"
+			],
+			"outputs": [],
+			"outputLogs": "errors-only"
 		}
 	}
 }

@@ -18,3 +18,8 @@ packages:create-adb:
       - any-glob-to-any-file:
           - packages/create-adb/*
           - packages/create-adb/**/*
+packages:test:
+  - changed-files:
+      - any-glob-to-any-file:
+          - packages/test/*
+          - packages/test/**/*

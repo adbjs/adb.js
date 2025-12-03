@@ -24,6 +24,8 @@
   color: fbca04
 - name: package:create-adb
   color: fbca04
+- name: packages:test
+  color: fbca04
 - name: question
   color: d876e3
 - name: semver:major
