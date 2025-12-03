@@ -4,6 +4,3 @@ apps:docs:
 apps:website:
   - "### Which (application|package|application or package) is this (bug
     report|feature request) for\\?\\n\\nDocumentation\\n"
-packages:test:
-  - "### Which (application|package|application or package) is this (bug
-    report|feature request) for\\?\\n\\ntest\\n"
