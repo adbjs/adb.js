@@ -5,3 +5,5 @@
 
 package.json @adbjs/core
 pnpm-lock.yaml @adbjs/core
+
+/.github/ISSUE_TEMPLATE/ @adbjs/docs @adbjs/core
