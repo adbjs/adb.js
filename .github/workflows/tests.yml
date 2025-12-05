@@ -53,7 +53,7 @@ jobs:
         run: pnpm exec turbo run lint --filter="...[HEAD^1]" --concurrency=4 -- --format=compact
 
       - name: Upload Coverage
-        if: github.repository_owner == 'discordjs'
+        if: github.repository_owner == 'adbjs'
         uses: ./packages/actions/src/uploadCoverage
         with:
           codecov_token: ${{ secrets.CODECOV_TOKEN }}
