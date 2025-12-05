@@ -1,0 +1,17 @@
+name: 'Upload Coverage'
+description: 'Uploads code coverage reports to codecov with separate flags for separate packages'
+inputs:
+  codecov_token:
+    description: 'Codecov token.'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Upload ADB.js Coverage
+      if: ${{ hashFiles('packages/adb.js/coverage/cobertura-coverage.xml') != '' }}
+      uses: codecov/codecov-action@v4
+      with:
+        files: ./packages/adb.js/coverage/cobertura-coverage.xml
+        disable_search: true
+        flags: adb.js
+        token: ${{ inputs.CODECOV_TOKEN }}

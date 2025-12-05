@@ -8,6 +8,11 @@ apps:website:
       - any-glob-to-any-file:
           - apps/website/*
           - apps/website/**/*
+packages:actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - packages/actions/*
+          - packages/actions/**/*
 packages:adb.js:
   - changed-files:
       - any-glob-to-any-file:

@@ -20,6 +20,8 @@
   color: B0D6F1
 - name: invalid
   color: e4e669
+- name: packages:actions
+  color: fbca04
 - name: packages:adb.js
   color: fbca04
 - name: question
