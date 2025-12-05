@@ -14,3 +14,7 @@ peerDependencyRules:
     - '*'
   ignoreMissing:
     - '*'
+
+publicHoistPattern:
+  - '*eslint*'
+  - '*prettier*'
