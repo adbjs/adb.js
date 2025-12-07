@@ -6,6 +6,8 @@
   color: ee1519
 - name: bug
   color: d73a4a
+- name: dependencies
+  color: 276bd1
 - name: documentation
   color: 0075ca
 - name: duplicate
