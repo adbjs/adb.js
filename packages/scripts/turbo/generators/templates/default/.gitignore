@@ -16,11 +16,6 @@ pids
 
 # Dist
 dist
-dist-docs
-
-# Docs
-docs/**/*
-!docs/README.md
 
 # Miscellaneous
 .turbo

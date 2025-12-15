@@ -13,14 +13,11 @@ pids
 
 # Env
 .env
+test/auth.json
+test/auth.js
 
 # Dist
 dist
-dist-docs
-
-# Docs
-docs/**/*
-!docs/README.md
 
 # Miscellaneous
 .turbo

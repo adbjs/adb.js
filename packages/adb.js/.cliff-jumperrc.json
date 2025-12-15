@@ -3,5 +3,6 @@
 	"name": "adb.js",
 	"org": "adbjs",
 	"packagePath": "packages/adb.js",
+	"tagTemplate": "{{new-version}}",
 	"identifierBase": false
 }
