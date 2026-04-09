@@ -8,7 +8,7 @@ on:
 jobs:
   congrats:
     name: congratsbot
-    if: ${{ github.repository_owner == 'adbjs' && github.event.head_commit.message != 'ci: format' }}
+    if: "${{ github.repository_owner == 'adbjs' && github.event.head_commit.message != 'ci: format' }}"
     uses: withastro/automation/.github/workflows/congratsbot.yml@main
     with:
       EMOJIS: 🎉,🎊,🧑‍🚀,🥳,🙌,🚀,🦀,🔥,🚢
