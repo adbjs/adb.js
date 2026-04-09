@@ -39,7 +39,7 @@ jobs:
 
             try {
               await github.rest.teams.getMembershipForUserInOrg({
-                org: 'zed-industries',
+                org: 'adbjs',
                 team_slug: 'staff',
                 username: prAuthor
               });
