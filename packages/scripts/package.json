@@ -53,20 +53,20 @@
 	},
 	"funding": "https://github.com/adbjs/adb.js?sponsor",
 	"dependencies": {
-		"yaml": "^2.8.1"
+		"yaml": "^2.8.3"
 	},
 	"devDependencies": {
-		"@turbo/gen": "^2.6.3",
-		"@types/node": "^24.10.1",
+		"@turbo/gen": "^2.9.5",
+		"@types/node": "^24.12.2",
 		"cross-env": "^10.1.0",
-		"eslint": "^9.39.1",
+		"eslint": "^9.39.4",
 		"eslint-config-neon": "^0.2.9",
 		"eslint-formatter-compact": "^9.0.1",
 		"eslint-formatter-pretty": "^7.0.0",
-		"prettier": "^3.6.2",
-		"terser": "^5.44.0",
+		"prettier": "^3.8.1",
+		"terser": "^5.46.1",
 		"tsup": "^8.5.1",
-		"turbo": "^2.6.3",
+		"turbo": "^2.9.5",
 		"typescript": "~5.9.3"
 	},
 	"engines": {
