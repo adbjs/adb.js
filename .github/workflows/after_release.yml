@@ -27,7 +27,7 @@ jobs:
     steps:
       - id: get-content
         name: build message
-        uses: 2428392/gh-truncate-string-action@v1
+        uses: 2428392/gh-truncate-string-action@b3ff790d21cf42af3ca7579146eedb93c8fb0757 #v1.4.1
         with:
           stringToTruncate: |
             📣 ADB.js [${{ github.event.release.tag_name || inputs.tag_name }}](<${{ github.event.release.html_url || format('{0}/{1}/releases/tag/{2}', github.server_url, github.repository, inputs.tag_name) }}>) was just released!
@@ -37,7 +37,7 @@ jobs:
           truncationSymbol: '...'
 
       - name: send to discord
-        uses: tsickert/discord-webhook@v7.0.0
+        uses: tsickert/discord-webhook@c840d45a03a323fbc3f7507ac7769dbd91bfb164 # v5.3.0
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_RELEASE_NOTES }}
           content: ${{ steps.get-content.outputs.string }}
