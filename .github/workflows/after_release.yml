@@ -1,0 +1,43 @@
+name: after_release
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: tag_name
+        required: true
+        type: string
+      prerelease:
+        description: prerelease
+        required: true
+        type: boolean
+      body:
+        description: body
+        type: string
+        default: ''
+
+jobs:
+  post_to_discord:
+    if: github.repository_owner == 'adbjs'
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: get-content
+        name: build message
+        uses: 2428392/gh-truncate-string-action@v1
+        with:
+          stringToTruncate: |
+            📣 ADB.js [${{ github.event.release.tag_name || inputs.tag_name }}](<${{ github.event.release.html_url || format('{0}/{1}/releases/tag/{2}', github.server_url, github.repository, inputs.tag_name) }}>) was just released!
+
+            ${{ github.event.release.body || inputs.body }}
+          maxLength: 2000
+          truncationSymbol: '...'
+
+      - name: send to discord
+        uses: tsickert/discord-webhook@v1
+        with:
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_RELEASE_NOTES }}
+          content: ${{ steps.get-content.outputs.string }}
