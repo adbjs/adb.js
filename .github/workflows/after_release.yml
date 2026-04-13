@@ -37,7 +37,7 @@ jobs:
           truncationSymbol: '...'
 
       - name: send to discord
-        uses: tsickert/discord-webhook@v3
+        uses: tsickert/discord-webhook@latest
         with:
           webhook-url: ${{ secrets.DISCORD_WEBHOOK_RELEASE_NOTES }}
           content: ${{ steps.get-content.outputs.string }}
